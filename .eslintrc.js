@@ -6,7 +6,7 @@ module.exports = {
     mocha: true,
     node: true,
   },
-  plugins: ['@typescript-eslint', 'unicorn', 'simple-import-sort'],
+  plugins: ['unicorn', 'simple-import-sort'],
   extends: [
     'standard',
     'plugin:prettier/recommended',
