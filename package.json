@@ -12,7 +12,8 @@
     "type-check": "tsc --pretty --noEmit",
     "pre-commit": "yarn lint && yarn type-check && yarn solhint",
     "solhint": "solhint contracts/**/*.sol",
-    "test": "npx hardhat test"
+    "test": "npx hardhat test",
+    "postinstall":"typechain"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.1",

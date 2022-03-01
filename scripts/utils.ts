@@ -1,4 +1,5 @@
 // eslint-disable-next-line node/no-unpublished-import
+import { Contract } from 'ethers';
 import { ethers, upgrades } from 'hardhat';
 
 export const multiDeploy = async (
@@ -55,4 +56,13 @@ export const multiDeployUUPS = async (
   await Promise.all([instances.map((x) => x.deployed())]);
 
   return instances;
+};
+
+export const logAddress = (name: string, address: string) =>
+  console.log(`${name} deployed to: ${address}`);
+
+export const logAddresses = (contracts: [string, Contract][]) => {
+  for (const element of contracts) {
+    logAddress(element[0], element[1].address);
+  }
 };
