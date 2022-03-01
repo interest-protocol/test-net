@@ -112,3 +112,6 @@ typechain
 # OZ
 .openzeppelin
 cache
+
+# Hardhat
+artifacts
